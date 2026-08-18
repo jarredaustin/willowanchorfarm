@@ -203,7 +203,7 @@ export default function Home() {
       <AnimationStyles />
       <footer className="py-8 bg-black text-white">
         <div className="container mx-auto px-6 text-center text-white/80 font-light">
-          © 2016-2025 Willow Anchor Farm. All rights reserved.
+          © 2016-2026 Willow Anchor Farm. All rights reserved.
         </div>
       </footer>
     </div>
