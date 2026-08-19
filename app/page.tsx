@@ -167,8 +167,8 @@ export default function Home() {
         <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-[#4A6741]">
           <div className="absolute inset-0 z-0">
             <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_8558-cBDorB5V0e3zNuXqOmnXT1mj4wSNAx.png"
-              alt="Goats providing natural land clearing"
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_8570-e32nwsKCBF1GHQhnBsyr0ZudpbZLQD.png"
+              alt="Willow Anchor Farm harvest"
               layout="fill"
               objectFit="cover"
               priority
