@@ -17,7 +17,7 @@ export default function Home() {
             alt="Cattle raised at Willow Anchor Farm"
             fill
             priority
-            className="object-cover object-[58%_center] sm:object-center"
+            className="object-cover object-[20%_center] sm:object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/25" />
           <div className="container relative z-10 mx-auto px-5 pb-10 pt-28 sm:pt-32 md:px-8 lg:py-28">
