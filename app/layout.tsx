@@ -8,7 +8,7 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: 'Willow Anchor Farm',
-  description: 'Sustainably raised meats, farm-fresh produce, and CSA partnerships from Willow Anchor Farm.',
+  description: 'Sustainably raised meats, farm-fresh produce, and non-invasive land clearing with goats and sheep from Willow Anchor Farm.',
   icons: {
     icon: [
       {

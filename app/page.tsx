@@ -163,12 +163,12 @@ export default function Home() {
         {/* White border separator */}
         <div className="h-3 bg-white"></div>
 
-        {/* CSA Partnership Section */}
+        {/* Natural Land Clearing Section */}
         <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-[#4A6741]">
           <div className="absolute inset-0 z-0">
             <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_8570-e32nwsKCBF1GHQhnBsyr0ZudpbZLQD.png"
-              alt="CSA Harvest Box"
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_8558-cBDorB5V0e3zNuXqOmnXT1mj4wSNAx.png"
+              alt="Goats providing natural land clearing"
               layout="fill"
               objectFit="cover"
               priority
@@ -180,24 +180,21 @@ export default function Home() {
           <div className="container relative z-10 mx-auto px-4">
             <div className="text-center max-w-4xl mx-auto">
               <h2 className="text-6xl md:text-7xl lg:text-8xl font-semibold tracking-tight mb-4 text-white">
-                Become a CSA Partner
+                Non-Invasive Land Clearing
               </h2>
-              <p className="text-2xl md:text-3xl text-white/90 font-light mb-8">
-                Fresh from our fields to your table.
+              <p className="text-2xl md:text-3xl text-white/90 font-light mb-4">
+                Thoughtful vegetation management, powered by goats and sheep.
               </p>
-              <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6">
-                <Link 
-                  href="/csa/learn-more"
+              <p className="text-lg md:text-xl text-white/85 font-light leading-relaxed mb-8 max-w-3xl mx-auto">
+                Our animals help manage brush, weeds, and overgrowth while minimizing soil disturbance and reducing the need for heavy equipment.
+              </p>
+              <div className="flex items-center justify-center">
+                <a
+                  href={`mailto:${contactEmail}?subject=${encodeURIComponent('Goat & Sheep Land Clearing Inquiry')}&body=${encodeURIComponent(`Hello Willow Anchor Farm,\n\nI'm interested in learning more about your non-invasive land clearing services using goats and sheep. Please contact me to discuss my property and scheduling.\n\nThank you!`)}`}
                   className="bg-white text-[#4A6741] px-8 py-4 rounded-full text-lg font-medium hover:bg-white/90 transition-all duration-300"
                 >
                   Learn more
-                </Link>
-                <Link 
-                  href="/csa/join"
-                  className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-white/10 transition-all duration-300"
-                >
-                  Join now
-                </Link>
+                </a>
               </div>
             </div>
           </div>
