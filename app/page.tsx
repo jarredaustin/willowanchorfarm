@@ -18,7 +18,7 @@ export default function Home() {
             <div className="flex-grow bg-black"></div>
             <div className="relative flex-grow-[4]">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_8356-removebg-preview-GwFMSWWVYWHAvsqNbQtn2kvDaJXyvv.png"
+                src="/willow-anchor-logo.png"
                 alt="Willow Anchor Farm Logo"
                 layout="fill"
                 objectFit="contain"

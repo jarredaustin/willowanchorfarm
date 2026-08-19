@@ -9,20 +9,16 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: 'Willow Anchor Farm',
   description: 'Sustainably raised meats, farm-fresh produce, and CSA partnerships from Willow Anchor Farm.',
-  generator: 'v0.app',
   icons: {
     icon: [
       {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
+        url: '/favicon.ico',
+        sizes: '48x48',
       },
       {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
+        url: '/icon-512.png',
+        type: 'image/png',
+        sizes: '512x512',
       },
     ],
     apple: '/apple-icon.png',
