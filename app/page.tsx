@@ -58,22 +58,22 @@ export default function Home() {
               {[
             {
               title: 'Grass-Fed Beef',
-              subtitle: 'Naturally raised, exceptionally tender.',
+              subtitle: 'Pasture-raised with care for rich, honest flavor.',
               image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_8559-kaodT7UpL171w3KqFsTeborQ9XL2UC.png",
             },
             {
               title: 'Free-Range Chicken & Eggs',
-              subtitle: 'Ethically raised, naturally delicious.',
+              subtitle: 'Wholesome chicken and farm-fresh eggs from free-ranging hens.',
               image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_8557-FRToeYPemCDmT0H7yxXuCGCcO5YM30.png",
             },
             {
               title: 'Adirondack Meat Goats',
-              subtitle: 'Heritage breed, superior quality.',
+              subtitle: 'Pasture-raised goats known for lean, flavorful meat.',
               image: "/meat-goats.jpg",
             },
             {
               title: 'Farm Fresh Produce',
-              subtitle: 'Responsibly grown, no pesticides.',
+              subtitle: 'Seasonal produce, thoughtfully grown and freshly harvested.',
               image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/OIP-TvSdSlWCosfXyvFxqhOnRKJVHqoPID.png",
             }
               ].map((product) => (
