@@ -12,13 +12,15 @@ export default function Home() {
         {/* Hero Section */}
         <section id="top" className="relative flex min-h-[100svh] items-center overflow-hidden bg-black lg:h-screen">
           <Header />
-          <Image
-            src="/highland-cattle.jpg"
-            alt="Cattle raised at Willow Anchor Farm"
-            fill
-            priority
-            className="object-cover object-[20%_center] sm:object-center"
-          />
+          <picture className="absolute inset-0">
+            <source media="(max-width: 639px)" srcSet="/highland-hero.jpg" />
+            <img
+              src="/highland-cattle.jpg"
+              alt="Highland cattle raised at Willow Anchor Farm"
+              className="h-full w-full object-cover object-[20%_center] sm:object-center"
+              fetchPriority="high"
+            />
+          </picture>
           <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/25" />
           <div className="container relative z-10 mx-auto px-5 pb-10 pt-28 sm:pt-32 md:px-8 lg:py-28">
             <div className="min-w-0 max-w-3xl">
