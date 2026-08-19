@@ -62,7 +62,7 @@ export default function Home() {
               image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_8559-kaodT7UpL171w3KqFsTeborQ9XL2UC.png",
             },
             {
-              title: 'Free-Range Chicken',
+              title: 'Free-Range Chicken & Eggs',
               subtitle: 'Ethically raised, naturally delicious.',
               image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_8557-FRToeYPemCDmT0H7yxXuCGCcO5YM30.png",
             },
