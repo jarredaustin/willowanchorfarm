@@ -7,38 +7,38 @@ const generalContactHref = `mailto:${contactEmail}?subject=${encodeURIComponent(
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col bg-white">
+    <div className="min-h-screen overflow-x-hidden flex flex-col bg-white">
       <main className="flex-grow">
         {/* Hero Section */}
-        <section id="top" className="relative flex min-h-[640px] h-[78vh] items-center overflow-hidden bg-black">
+        <section id="top" className="relative flex min-h-[100svh] items-center overflow-hidden bg-black lg:h-screen">
           <Header />
           <Image
             src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_8559-kaodT7UpL171w3KqFsTeborQ9XL2UC.png"
             alt="Cattle raised at Willow Anchor Farm"
             fill
             priority
-            className="object-cover"
+            className="object-cover object-[58%_center] sm:object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/25" />
-          <div className="container relative z-10 mx-auto px-5 pt-20 md:px-8">
-            <div className="max-w-3xl">
-              <div className="mb-7 flex h-28 w-28 items-center justify-center rounded-full bg-white p-3 shadow-xl md:h-32 md:w-32">
+          <div className="container relative z-10 mx-auto px-5 pb-10 pt-28 sm:pt-32 md:px-8 lg:py-28">
+            <div className="min-w-0 max-w-3xl">
+              <div className="mb-7 hidden h-28 w-28 items-center justify-center rounded-full bg-white p-3 shadow-xl sm:flex md:h-32 md:w-32">
                 <Image src="/willow-anchor-logo.png" alt="Willow Anchor Farm logo" width={112} height={103} priority />
               </div>
-              <p className="mb-4 text-sm font-semibold uppercase tracking-[0.24em] text-white/75">Sustainably raised in the Adirondacks</p>
-              <h1 className="text-5xl font-semibold leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-7xl">
+              <p className="mb-4 max-w-full text-xs font-semibold uppercase tracking-[0.16em] text-white/75 sm:text-sm sm:tracking-[0.24em]">Sustainably raised in the Adirondacks</p>
+              <h1 className="max-w-full text-[2.55rem] font-semibold leading-[1.08] tracking-tight text-white sm:text-6xl lg:text-7xl">
                 Good food starts with good stewardship.
               </h1>
-              <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/85 md:text-xl">
+              <p className="mt-5 max-w-2xl text-base leading-relaxed text-white/85 sm:mt-6 sm:text-lg md:text-xl">
                 Thoughtfully raised meats, fresh produce, and practical land care rooted in respect for animals and the land.
               </p>
-              <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-                <a href="#products" className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 font-semibold text-[#3f5b38] transition-colors hover:bg-white/90">
+              <div className="mt-7 flex w-full flex-col gap-3 sm:mt-9 sm:w-auto sm:flex-row">
+                <a href="#products" className="inline-flex w-full items-center justify-center rounded-full bg-white px-5 py-3 font-semibold text-[#3f5b38] transition-colors hover:bg-white/90 sm:w-auto sm:px-6">
                   Explore our products <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
                 <a
                   href={generalContactHref}
-                  className="inline-flex items-center justify-center rounded-full border border-white/70 px-6 py-3 font-semibold text-white transition-colors hover:bg-white/10"
+                  className="inline-flex w-full items-center justify-center rounded-full border border-white/70 px-5 py-3 font-semibold text-white transition-colors hover:bg-white/10 sm:w-auto sm:px-6"
                 >
                   Contact us
                 </a>
@@ -69,7 +69,7 @@ export default function Home() {
             {
               title: 'Adirondack Meat Goats',
               subtitle: 'Heritage breed, superior quality.',
-              image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_8558-cBDorB5V0e3zNuXqOmnXT1mj4wSNAx.png",
+              image: "/meat-goats.jpg",
             },
             {
               title: 'Farm Fresh Produce',
@@ -95,9 +95,8 @@ export default function Home() {
               <Image
                 src={product.image || "/placeholder.svg"}
                 alt={product.title}
-                layout="fill"
-                objectFit="cover"
-                className="transition-transform duration-700 group-hover:scale-105"
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/35 to-black/20" />
             </div>
@@ -151,10 +150,9 @@ export default function Home() {
             <Image
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_8570-e32nwsKCBF1GHQhnBsyr0ZudpbZLQD.png"
               alt="Willow Anchor Farm harvest"
-              layout="fill"
-              objectFit="cover"
+              fill
               priority
-              className="object-center"
+              className="object-cover object-center"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#4A6741] via-[#4A6741]/70 to-[#4A6741]/50" />
           </div>
