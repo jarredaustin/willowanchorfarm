@@ -74,7 +74,7 @@ export default function Home() {
             {
               title: 'Farm Fresh Produce',
               subtitle: 'Seasonal produce, thoughtfully grown and freshly harvested.',
-              image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/OIP-TvSdSlWCosfXyvFxqhOnRKJVHqoPID.png",
+              image: "/farm-fresh-produce.jpg",
             }
               ].map((product) => (
             <div key={product.title} className="group relative aspect-[4/3] overflow-hidden rounded-2xl bg-black shadow-sm">
