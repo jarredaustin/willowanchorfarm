@@ -13,7 +13,7 @@ export default function Home() {
         <section id="top" className="relative flex min-h-[100svh] items-center overflow-hidden bg-black lg:h-screen">
           <Header />
           <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_8559-kaodT7UpL171w3KqFsTeborQ9XL2UC.png"
+            src="/highland-cattle.jpg"
             alt="Cattle raised at Willow Anchor Farm"
             fill
             priority
@@ -59,7 +59,7 @@ export default function Home() {
             {
               title: 'Grass-Fed Beef',
               subtitle: 'Pasture-raised with care for rich, honest flavor.',
-              image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_8559-kaodT7UpL171w3KqFsTeborQ9XL2UC.png",
+              image: "/highland-cattle.jpg",
             },
             {
               title: 'Free-Range Chicken & Eggs',
