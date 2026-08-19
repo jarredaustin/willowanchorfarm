@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import Image from 'next/image'
 import Link from 'next/link'
 import { Menu, X } from 'lucide-react'
 
@@ -27,7 +26,7 @@ export default function Header() {
             <li><Link href="/" className="text-sm text-white hover:text-[#4A6741] transition-colors duration-200">Home</Link></li>
             <li><Link href="/about" className="text-sm text-white hover:text-[#4A6741] transition-colors duration-200">About</Link></li>
             <li><Link href="/products" className="text-sm text-white hover:text-[#4A6741] transition-colors duration-200">Products</Link></li>
-            <li><Link href="/contact" className="text-sm text-white hover:text-[#4A6741] transition-colors duration-200">Contact</Link></li>
+            <li><a href="mailto:william@willowanchorfarm.com?subject=Willow%20Anchor%20Farm%20Inquiry" className="text-sm text-white hover:text-[#4A6741] transition-colors duration-200">Contact</a></li>
           </ul>
         </nav>
       )}

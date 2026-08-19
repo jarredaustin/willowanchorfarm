@@ -4,6 +4,9 @@ import Header from '../components/Header'
 import { ArrowRight } from 'lucide-react'
 import AnimationStyles from '../components/AnimationStyles'
 
+const contactEmail = 'william@willowanchorfarm.com'
+const generalContactHref = `mailto:${contactEmail}?subject=${encodeURIComponent('Willow Anchor Farm Inquiry')}`
+
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col bg-white">
@@ -42,12 +45,12 @@ export default function Home() {
                 >
                   Learn more <ArrowRight className="inline-block ml-1 h-4 w-4" />
                 </Link>
-                <Link 
-                  href="/contact"
+                <a
+                  href={generalContactHref}
                   className="text-lg text-white border border-white px-4 py-2 rounded-full hover:bg-white/10 transition-colors"
                 >
                   Contact us <ArrowRight className="inline-block ml-1 h-4 w-4" />
-                </Link>
+                </a>
               </div>
             </div>
           </div>
@@ -96,12 +99,12 @@ export default function Home() {
                   >
                     Learn more
                   </Link>
-                  <Link 
-                    href="/contact"
+                  <a
+                    href={`mailto:${contactEmail}?subject=${encodeURIComponent(`Order inquiry: ${product.title}`)}&body=${encodeURIComponent(`Hello Willow Anchor Farm,\n\nI'm interested in ordering ${product.title}. Please let me know about current availability, pricing, and pickup or delivery options.\n\nThank you!`)}`}
                     className="text-sm text-white border border-white/90 backdrop-blur-sm px-4 py-2 rounded-full hover:bg-white/10 transition-colors"
                   >
-                    Order now
-                  </Link>
+                    Contact to order
+                  </a>
                 </div>
               </div>
               <Image
