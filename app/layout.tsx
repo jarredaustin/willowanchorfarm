@@ -32,6 +32,29 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function () {
+                var navigation = performance.getEntriesByType('navigation')[0];
+                if (navigation && navigation.type === 'reload') {
+                  if ('scrollRestoration' in history) {
+                    history.scrollRestoration = 'manual';
+                  }
+                  if (window.location.hash) {
+                    history.replaceState(null, '', window.location.pathname + window.location.search);
+                  }
+                  window.scrollTo(0, 0);
+                  window.addEventListener('pageshow', function () {
+                    window.scrollTo(0, 0);
+                  }, { once: true });
+                }
+              })();
+            `,
+          }}
+        />
+      </head>
       <body className="font-sans antialiased">
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
