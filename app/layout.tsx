@@ -7,8 +7,33 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.willowanchorfarm.com'),
   title: 'Willow Anchor Farm',
   description: 'Sustainably raised meats, farm-fresh produce, and non-invasive land clearing with goats and sheep from Willow Anchor Farm.',
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    type: 'website',
+    url: '/',
+    siteName: 'Willow Anchor Farm',
+    title: 'Willow Anchor Farm',
+    description: 'Sustainably raised meats, farm-fresh produce, and non-invasive land clearing with goats and sheep.',
+    images: [
+      {
+        url: '/social-preview.png',
+        width: 1200,
+        height: 630,
+        alt: 'Highland cattle at Willow Anchor Farm',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Willow Anchor Farm',
+    description: 'Sustainably raised meats, farm-fresh produce, and non-invasive land clearing with goats and sheep.',
+    images: ['/social-preview.png'],
+  },
   icons: {
     icon: [
       {
