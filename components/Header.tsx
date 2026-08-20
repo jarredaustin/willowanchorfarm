@@ -6,9 +6,10 @@ import Link from 'next/link'
 import { Menu, X } from 'lucide-react'
 
 const navItems = [
-  { label: 'Products', href: '#products' },
+  { label: 'Meat', href: '#meat' },
   { label: 'Our Practices', href: '#our-practices' },
-  { label: 'Land Clearing', href: '#land-clearing' },
+  { label: 'Service Area', href: '#service-area' },
+  { label: 'How to Buy', href: '#how-to-buy' },
 ]
 
 export default function Header() {

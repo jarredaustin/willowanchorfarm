@@ -8,8 +8,8 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.willowanchorfarm.com'),
-  title: 'Willow Anchor Farm',
-  description: 'Sustainably raised meats, farm-fresh produce, and non-invasive land clearing with goats and sheep from Willow Anchor Farm.',
+  title: 'Pasture-Raised Goat Meat & Beef in Upstate NY | Willow Anchor Farm',
+  description: 'Pasture-raised goat meat and beef from Willow Anchor Farm in Montgomery County, serving Albany, Saratoga, Fulton, and Schoharie counties. Email for availability.',
   alternates: {
     canonical: '/',
   },
@@ -17,8 +17,8 @@ export const metadata: Metadata = {
     type: 'website',
     url: '/',
     siteName: 'Willow Anchor Farm',
-    title: 'Willow Anchor Farm',
-    description: 'Sustainably raised meats, farm-fresh produce, and non-invasive land clearing with goats and sheep.',
+    title: 'Pasture-Raised Goat Meat & Beef | Willow Anchor Farm',
+    description: 'Pasture-raised goat meat and beef from Montgomery County, serving communities across Upstate New York.',
     images: [
       {
         url: '/social-preview.png',
@@ -30,8 +30,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Willow Anchor Farm',
-    description: 'Sustainably raised meats, farm-fresh produce, and non-invasive land clearing with goats and sheep.',
+    title: 'Pasture-Raised Goat Meat & Beef | Willow Anchor Farm',
+    description: 'Pasture-raised goat meat and beef from Montgomery County, serving communities across Upstate New York.',
     images: ['/social-preview.png'],
   },
   icons: {

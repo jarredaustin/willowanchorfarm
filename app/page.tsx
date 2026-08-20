@@ -1,9 +1,17 @@
 import Image from 'next/image'
 import Header from '../components/Header'
-import { ArrowRight, Facebook, Mail } from 'lucide-react'
+import { ArrowRight, Facebook, Mail, MapPin } from 'lucide-react'
 
 const contactEmail = 'william@willowanchorfarm.com'
 const generalContactHref = `mailto:${contactEmail}?subject=${encodeURIComponent('Willow Anchor Farm Inquiry')}`
+
+function inquiryHref(subject: string, interest: string) {
+  return `mailto:${contactEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Hello Willow Anchor Farm,\n\nI'm interested in ${interest}. Please let me know about current availability, pricing, and pickup or delivery options.\n\nMy town/county: \nPreferred quantity or cuts: \n\nThank you!`)}`
+}
+
+const goatInquiryHref = inquiryHref('Goat Meat Pricing & Availability Inquiry', 'pasture-raised goat meat')
+const beefInquiryHref = inquiryHref('Beef Pricing & Availability Inquiry', 'pasture-raised beef')
+const deliveryInquiryHref = inquiryHref('Bulk Order Delivery Inquiry', 'delivery for a larger meat order')
 
 export default function Home() {
   return (
@@ -25,16 +33,16 @@ export default function Home() {
               <div className="mb-7 hidden h-28 w-28 items-center justify-center rounded-full bg-white p-3 shadow-xl sm:flex md:h-32 md:w-32">
                 <Image src="/willow-anchor-logo.png" alt="Willow Anchor Farm logo" width={112} height={103} priority />
               </div>
-              <p className="mb-4 max-w-full text-xs font-semibold uppercase tracking-[0.16em] text-white/75 sm:text-sm sm:tracking-[0.24em]">Sustainably raised in the Adirondacks</p>
+              <p className="mb-4 max-w-full text-xs font-semibold uppercase tracking-[0.16em] text-white/75 sm:text-sm sm:tracking-[0.24em]">Pasture-raised in Montgomery County, New York</p>
               <h1 className="max-w-full text-[2.55rem] font-semibold leading-[1.08] tracking-tight text-white sm:text-6xl lg:text-7xl">
                 Good food starts with good stewardship.
               </h1>
               <p className="mt-5 max-w-2xl text-base leading-relaxed text-white/85 sm:mt-6 sm:text-lg md:text-xl">
-                Thoughtfully raised meats, fresh produce, and practical land care rooted in respect for animals and the land.
+                Pasture-raised goat meat and beef from the Town of Florida, serving families across Upstate New York.
               </p>
               <div className="mt-7 flex w-full flex-col gap-3 sm:mt-9 sm:w-auto sm:flex-row">
-                <a href="#products" className="inline-flex w-full items-center justify-center rounded-full bg-white px-5 py-3 font-semibold text-[#3f5b38] transition-colors hover:bg-white/90 sm:w-auto sm:px-6">
-                  Explore our products <ArrowRight className="ml-2 h-4 w-4" />
+                <a href="#meat" className="inline-flex w-full items-center justify-center rounded-full bg-white px-5 py-3 font-semibold text-[#3f5b38] transition-colors hover:bg-white/90 sm:w-auto sm:px-6">
+                  Explore our pasture-raised meat <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
                 <a
                   href={generalContactHref}
@@ -43,6 +51,41 @@ export default function Home() {
                   Contact us
                 </a>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Meat Details */}
+        <section id="meat" className="bg-white py-20 md:py-28">
+          <div className="container mx-auto px-5 md:px-8">
+            <div className="mx-auto mb-12 max-w-3xl text-center">
+              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[#4A6741]">Pasture to table</p>
+              <h2 className="text-4xl font-semibold tracking-tight text-stone-900 md:text-5xl">Pasture-raised meat, grown close to home.</h2>
+              <p className="mt-5 text-lg leading-relaxed text-stone-600">Choose individual cuts or ask about ordering an animal with a cut sheet. Availability changes throughout the year, so email us for current options and pricing.</p>
+            </div>
+            <div className="grid gap-6 lg:grid-cols-2">
+              <article id="goat-meat" className="overflow-hidden rounded-3xl bg-[#f6f5f0]">
+                <div className="relative aspect-[16/10]">
+                  <Image src="/meat-goats.jpg" alt="Adirondack Meat Goats grazing at Willow Anchor Farm" fill className="object-cover" />
+                </div>
+                <div className="p-7 md:p-10">
+                  <p className="mb-2 text-sm font-semibold uppercase tracking-[0.18em] text-[#4A6741]">Adirondack Meat Goats</p>
+                  <h3 className="text-3xl font-semibold text-stone-900">Savanna &amp; Boer heritage</h3>
+                  <p className="mt-4 leading-relaxed text-stone-600">Our Adirondack Meat Goats are a multigenerational blend of Savanna and Boer goats, raised on pasture through rotational grazing. Individual cuts may be available, or request a cut sheet when ordering an animal.</p>
+                  <a href={goatInquiryHref} className="mt-7 inline-flex items-center rounded-full bg-[#4A6741] px-6 py-3 font-semibold text-white transition-colors hover:bg-[#3f5b38]">Ask about goat meat <ArrowRight className="ml-2 h-4 w-4" /></a>
+                </div>
+              </article>
+              <article id="beef" className="overflow-hidden rounded-3xl bg-[#f6f5f0]">
+                <div className="relative aspect-[16/10]">
+                  <Image src="/highland-cattle.jpg" alt="Highland-Angus cross cattle at Willow Anchor Farm" fill className="object-cover" />
+                </div>
+                <div className="p-7 md:p-10">
+                  <p className="mb-2 text-sm font-semibold uppercase tracking-[0.18em] text-[#4A6741]">Pasture-raised beef</p>
+                  <h3 className="text-3xl font-semibold text-stone-900">Highland–Angus cross beef</h3>
+                  <p className="mt-4 leading-relaxed text-stone-600">Our Highland–Angus cross cattle are raised on pasture through rotational grazing. Individual cuts may be available, or request a cut sheet when ordering an animal.</p>
+                  <a href={beefInquiryHref} className="mt-7 inline-flex items-center rounded-full bg-[#4A6741] px-6 py-3 font-semibold text-white transition-colors hover:bg-[#3f5b38]">Ask about beef <ArrowRight className="ml-2 h-4 w-4" /></a>
+                </div>
+              </article>
             </div>
           </div>
         </section>
@@ -115,21 +158,20 @@ export default function Home() {
                 Our Commitment
               </h2>
               <p className="mx-auto mb-12 max-w-3xl text-lg leading-relaxed text-white/85 md:text-xl">
-                At Willow Anchor Farm, we believe in harmonious agriculture that respects the land 
-                and delivers exceptional quality.
+                Rotational grazing is at the heart of how we raise our animals and care for the land.
               </p>
               <div className="grid grid-cols-1 gap-5 text-left md:grid-cols-3">
                 <div className="rounded-2xl border border-white/10 bg-white/10 p-7 backdrop-blur-sm">
-                  <h3 className="mb-3 text-xl font-semibold">Sustainable Practices</h3>
-                  <p className="leading-relaxed text-white/75">Implementing eco-friendly farming methods to preserve our environment.</p>
+                  <h3 className="mb-3 text-xl font-semibold">Rotational Grazing</h3>
+                  <p className="leading-relaxed text-white/75">We move animals through pasture, allowing grazed paddocks time to rest and recover.</p>
                 </div>
                 <div className="rounded-2xl border border-white/10 bg-white/10 p-7 backdrop-blur-sm">
-                  <h3 className="mb-3 text-xl font-semibold">Ethical Treatment</h3>
-                  <p className="leading-relaxed text-white/75">Ensuring the highest standards of animal welfare in all our operations.</p>
+                  <h3 className="mb-3 text-xl font-semibold">Year-Round Access</h3>
+                  <p className="leading-relaxed text-white/75">Our goats and cattle have year-round pasture access, with high-quality baleage added during snowy winter weather.</p>
                 </div>
                 <div className="rounded-2xl border border-white/10 bg-white/10 p-7 backdrop-blur-sm">
-                  <h3 className="mb-3 text-xl font-semibold">Quality Assurance</h3>
-                  <p className="leading-relaxed text-white/75">Rigorous standards to deliver the finest farm-fresh products to your table.</p>
+                  <h3 className="mb-3 text-xl font-semibold">Grass-Fed &amp; Finished</h3>
+                  <p className="leading-relaxed text-white/75">Our meat animals are grass-fed and grass-finished and raised without added hormones.</p>
                 </div>
               </div>
               <div className="mt-10">
@@ -140,6 +182,69 @@ export default function Home() {
                   Ask about our practices <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Service Area */}
+        <section id="service-area" className="bg-[#f6f5f0] py-20 md:py-28">
+          <div className="container mx-auto grid items-center gap-12 px-5 md:px-8 lg:grid-cols-[1.05fr_.95fr]">
+            <div>
+              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[#4A6741]">Serving Upstate New York</p>
+              <h2 className="text-4xl font-semibold tracking-tight text-stone-900 md:text-5xl">Local meat from Montgomery County.</h2>
+              <p className="mt-5 max-w-2xl text-lg leading-relaxed text-stone-600">Willow Anchor Farm is located in the Town of Florida in Montgomery County. Farm pickup is available by arrangement, with the private pickup address shared after your order is confirmed. Delivery may be available for larger orders.</p>
+              <a href={deliveryInquiryHref} className="mt-7 inline-flex items-center rounded-full bg-[#4A6741] px-6 py-3 font-semibold text-white transition-colors hover:bg-[#3f5b38]">Ask about larger-order delivery <ArrowRight className="ml-2 h-4 w-4" /></a>
+            </div>
+            <div className="rounded-3xl bg-white p-7 shadow-sm md:p-10">
+              <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-[#4A6741]/10 text-[#4A6741]"><MapPin className="h-6 w-6" /></div>
+              <h3 className="text-2xl font-semibold text-stone-900">Our regional community</h3>
+              <p className="mt-3 leading-relaxed text-stone-600">We welcome inquiries from customers across Montgomery, Albany, Saratoga, Fulton, and Schoharie counties—including communities such as Latham, Bethlehem, and Clifton Park.</p>
+              <div className="mt-6 flex flex-wrap gap-2">
+                {['Montgomery', 'Albany', 'Saratoga', 'Fulton', 'Schoharie'].map((county) => <span key={county} className="rounded-full bg-[#f6f5f0] px-4 py-2 text-sm font-medium text-stone-700">{county} County</span>)}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* How to Buy */}
+        <section id="how-to-buy" className="bg-white py-20 md:py-28">
+          <div className="container mx-auto px-5 md:px-8">
+            <div className="mx-auto max-w-3xl text-center">
+              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[#4A6741]">How to buy</p>
+              <h2 className="text-4xl font-semibold tracking-tight text-stone-900 md:text-5xl">Start with a simple email.</h2>
+              <p className="mt-5 text-lg leading-relaxed text-stone-600">Tell us what you are looking for and where you are located. We’ll reply with current availability, pricing, and the pickup or delivery options that apply to your order.</p>
+            </div>
+            <div className="mx-auto mt-12 grid max-w-5xl gap-5 md:grid-cols-3">
+              {[
+                ['1', 'Choose your meat', 'Ask about goat meat, beef, individual cuts, or an animal order with a cut sheet.'],
+                ['2', 'Confirm availability', 'We’ll share current options and pricing directly by email.'],
+                ['3', 'Arrange fulfillment', 'Pick up at the farm by arrangement, or ask about delivery for a larger order.'],
+              ].map(([number, title, copy]) => <div key={number} className="rounded-2xl border border-stone-200 p-7"><span className="mb-5 flex h-10 w-10 items-center justify-center rounded-full bg-[#4A6741] font-semibold text-white">{number}</span><h3 className="text-xl font-semibold text-stone-900">{title}</h3><p className="mt-3 leading-relaxed text-stone-600">{copy}</p></div>)}
+            </div>
+            <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
+              <a href={goatInquiryHref} className="inline-flex items-center rounded-full bg-[#4A6741] px-6 py-3 font-semibold text-white hover:bg-[#3f5b38]">Check goat meat availability</a>
+              <a href={beefInquiryHref} className="inline-flex items-center rounded-full border border-[#4A6741] px-6 py-3 font-semibold text-[#3f5b38] hover:bg-[#4A6741]/5">Check beef availability</a>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section id="faq" className="bg-[#f6f5f0] py-20 md:py-28">
+          <div className="container mx-auto px-5 md:px-8">
+            <div className="mx-auto max-w-4xl">
+              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[#4A6741]">Common questions</p>
+              <h2 className="text-4xl font-semibold tracking-tight text-stone-900 md:text-5xl">Before you inquire</h2>
+              <div className="mt-10 divide-y divide-stone-200 border-y border-stone-200">
+                {[
+                  ['How are the animals raised?', 'Our goats and cattle have year-round pasture access and are rotationally grazed. During snowy winter conditions, we supplement their forage with high-quality baleage.'],
+                  ['Can I buy individual cuts?', 'Yes, individual cuts may be available. Email us to ask what is currently in stock and to request pricing.'],
+                  ['Can I choose the cuts for an animal order?', 'A cut sheet can be provided upon request so you can select your preferred cuts.'],
+                  ['Where is the meat processed?', 'Our meat is processed at a USDA-inspected facility and provided as individually labeled cuts.'],
+                  ['Where do I pick up my order?', 'Pickup is available by arrangement at our farm in the Town of Florida, Montgomery County. Because the farm address is private, details are shared after an order is confirmed.'],
+                  ['Is delivery available?', 'Delivery may be available for larger orders across our Upstate New York service area. Include your town, county, and desired quantity in your email.'],
+                ].map(([question, answer]) => <div key={question} className="grid gap-2 py-6 md:grid-cols-[.8fr_1.2fr] md:gap-10"><h3 className="text-lg font-semibold text-stone-900">{question}</h3><p className="leading-relaxed text-stone-600">{answer}</p></div>)}
+              </div>
+              <a href={generalContactHref} className="mt-8 inline-flex items-center font-semibold text-[#3f5b38]">Have another question? Email the farm <ArrowRight className="ml-2 h-4 w-4" /></a>
             </div>
           </div>
         </section>
@@ -197,6 +302,8 @@ export default function Home() {
               <h2 className="mb-4 text-sm font-semibold uppercase tracking-wider text-white/50">Explore</h2>
               <nav className="flex flex-col items-start gap-3" aria-label="Footer navigation">
                 <a href="#products" className="text-white/75 transition-colors hover:text-white">Products</a>
+                <a href="#service-area" className="text-white/75 transition-colors hover:text-white">Service Area</a>
+                <a href="#how-to-buy" className="text-white/75 transition-colors hover:text-white">How to Buy</a>
                 <a href="#our-practices" className="text-white/75 transition-colors hover:text-white">Our Practices</a>
                 <a href="#land-clearing" className="text-white/75 transition-colors hover:text-white">Land Clearing</a>
               </nav>
