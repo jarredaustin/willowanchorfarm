@@ -90,29 +90,19 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Product Highlights */}
+        {/* Other Farm Products */}
         <section id="products" className="bg-[#f6f5f0] py-20 md:py-28">
           <div className="container mx-auto px-5 md:px-8">
             <div className="mb-12 max-w-2xl">
-              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[#4A6741]">From our farm</p>
-              <h2 className="text-4xl font-semibold tracking-tight text-stone-900 md:text-5xl">Raised with care. Grown with purpose.</h2>
+              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[#4A6741]">Also from our farm</p>
+              <h2 className="text-4xl font-semibold tracking-tight text-stone-900 md:text-5xl">Chicken, eggs, and seasonal produce.</h2>
             </div>
             <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
               {[
             {
-              title: 'Grass-Fed Beef',
-              subtitle: 'Pasture-raised with care for rich, honest flavor.',
-              image: "/highland-cattle.jpg",
-            },
-            {
               title: 'Free-Range Chicken & Eggs',
               subtitle: 'Wholesome chicken and farm-fresh eggs from free-ranging hens.',
               image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_8557-FRToeYPemCDmT0H7yxXuCGCcO5YM30.png",
-            },
-            {
-              title: 'Adirondack Meat Goats',
-              subtitle: 'Pasture-raised goats known for lean, flavorful meat.',
-              image: "/meat-goats.jpg",
             },
             {
               title: 'Farm Fresh Produce',
