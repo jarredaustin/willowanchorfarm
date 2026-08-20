@@ -240,34 +240,41 @@ export default function Home() {
         </section>
 
         {/* Natural Land Clearing Section */}
-        <section id="land-clearing" className="relative flex min-h-[620px] items-center justify-center overflow-hidden bg-[#4A6741] py-28 md:py-36">
-          <div className="absolute inset-0 z-0">
-            <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_8570-e32nwsKCBF1GHQhnBsyr0ZudpbZLQD.png"
-              alt="Willow Anchor Farm harvest"
-              fill
-              priority
-              className="object-cover object-center"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#4A6741] via-[#4A6741]/70 to-[#4A6741]/50" />
-          </div>
+        <section id="land-clearing" className="bg-[#e8ede4] py-20 md:py-28">
+          <div className="container mx-auto px-5 md:px-8">
+            <div className="grid overflow-hidden rounded-3xl bg-[#3f5b38] shadow-sm lg:grid-cols-2">
+              <div className="relative min-h-[360px] lg:min-h-[680px]">
+                <Image
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_8570-e32nwsKCBF1GHQhnBsyr0ZudpbZLQD.png"
+                  alt="Goats and sheep providing natural vegetation management at Willow Anchor Farm"
+                  fill
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  className="object-cover object-center"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/25 to-transparent lg:bg-gradient-to-r lg:from-transparent lg:to-[#3f5b38]/15" />
+              </div>
+              <div className="flex flex-col justify-center p-7 text-white sm:p-10 lg:p-14 xl:p-16">
+                <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-white/65">A natural approach</p>
+                <h2 className="text-4xl font-semibold tracking-tight md:text-5xl">Natural Land Clearing</h2>
+                <p className="mt-5 text-xl leading-relaxed text-white/90">Thoughtful vegetation management, powered by goats and sheep.</p>
+                <p className="mt-4 leading-relaxed text-white/72">Our animals browse brush, weeds, and overgrowth in places where conventional equipment can be disruptive or difficult to use.</p>
 
-          <div className="container relative z-10 mx-auto px-5 md:px-8">
-            <div className="mx-auto max-w-4xl text-center">
-              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-white/75">A natural approach</p>
-              <h2 className="mb-5 text-4xl font-semibold tracking-tight text-white md:text-5xl lg:text-6xl">
-                Non-Invasive Land Clearing
-              </h2>
-              <p className="mb-5 text-xl text-white/90 md:text-2xl">
-                Thoughtful vegetation management, powered by goats and sheep.
-              </p>
-              <p className="mx-auto mb-9 max-w-3xl text-lg leading-relaxed text-white/80">
-                Our animals help manage brush, weeds, and overgrowth while minimizing soil disturbance and reducing the need for heavy equipment.
-              </p>
-              <div className="flex items-center justify-center">
+                <div className="my-8 divide-y divide-white/12 border-y border-white/12">
+                  {[
+                    ['Less soil disturbance', 'Four-legged land care without heavy machinery repeatedly crossing the site.'],
+                    ['Targeted brush management', 'A practical option for dense weeds, vines, and unwanted overgrowth.'],
+                    ['A lighter footprint', 'Vegetation management that works with the landscape and the animals.'],
+                  ].map(([title, copy]) => (
+                    <div key={title} className="py-5">
+                      <h3 className="font-semibold text-white">{title}</h3>
+                      <p className="mt-1 text-sm leading-relaxed text-white/65">{copy}</p>
+                    </div>
+                  ))}
+                </div>
+
                 <a
-                  href={`mailto:${contactEmail}?subject=${encodeURIComponent('Goat & Sheep Land Clearing Inquiry')}&body=${encodeURIComponent(`Hello Willow Anchor Farm,\n\nI'm interested in learning more about your non-invasive land clearing services using goats and sheep. Please contact me to discuss my property and scheduling.\n\nThank you!`)}`}
-                  className="inline-flex items-center rounded-full bg-white px-6 py-3 font-semibold text-[#3f5b38] transition-colors hover:bg-white/90"
+                  href={`mailto:${contactEmail}?subject=${encodeURIComponent('Goat & Sheep Land Clearing Inquiry')}&body=${encodeURIComponent(`Hello Willow Anchor Farm,\n\nI'm interested in natural land clearing using goats and sheep.\n\nProperty town/county: \nApproximate area or acreage: \nType of brush or overgrowth: \n\nPlease contact me to discuss the property and scheduling.\n\nThank you!`)}`}
+                  className="inline-flex w-fit items-center rounded-full bg-white px-6 py-3 font-semibold text-[#3f5b38] transition-colors hover:bg-white/90"
                 >
                   Ask about land clearing <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
