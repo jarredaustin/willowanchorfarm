@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
@@ -6,10 +6,15 @@ import './globals.css'
 const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+}
+
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.willowanchorfarm.com'),
   title: 'Pasture-Raised Goat Meat & Beef in Upstate NY | Willow Anchor Farm',
-  description: 'Pasture-raised goat meat and beef from Willow Anchor Farm in Montgomery County, serving Albany, Saratoga, Fulton, and Schoharie counties. Email for availability.',
+  description: 'Pasture-raised goat meat and beef from Willow Anchor Farm in Montgomery County, NY. All customers welcome; convenient to Albany, Saratoga, Fulton, and Schoharie counties.',
   alternates: {
     canonical: '/',
   },
@@ -18,7 +23,7 @@ export const metadata: Metadata = {
     url: '/',
     siteName: 'Willow Anchor Farm',
     title: 'Pasture-Raised Goat Meat & Beef | Willow Anchor Farm',
-    description: 'Pasture-raised goat meat and beef from Montgomery County, serving communities across Upstate New York.',
+    description: 'Pasture-raised goat meat and beef from Montgomery County, New York. Customers from any location are welcome to purchase.',
     images: [
       {
         url: '/social-preview.png',
@@ -31,7 +36,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Pasture-Raised Goat Meat & Beef | Willow Anchor Farm',
-    description: 'Pasture-raised goat meat and beef from Montgomery County, serving communities across Upstate New York.',
+    description: 'Pasture-raised goat meat and beef from Montgomery County, New York. Customers from any location are welcome to purchase.',
     images: ['/social-preview.png'],
   },
   icons: {

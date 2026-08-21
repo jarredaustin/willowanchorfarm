@@ -192,7 +192,7 @@ export default function Home() {
             <div className="rounded-3xl bg-white p-7 shadow-sm md:p-10">
               <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-[#4A6741]/10 text-[#4A6741]"><MapPin className="h-6 w-6" /></div>
               <h3 className="text-2xl font-semibold text-stone-900">Our regional community</h3>
-              <p className="mt-3 leading-relaxed text-stone-600">We welcome inquiries from customers across Montgomery, Albany, Saratoga, Fulton, and Schoharie counties—including communities such as Latham, Bethlehem, and Clifton Park.</p>
+              <p className="mt-3 leading-relaxed text-stone-600">Customers from anywhere are welcome to purchase. We’re especially convenient to Montgomery, Albany, Saratoga, Fulton, and Schoharie counties—including communities such as Latham, Bethlehem, and Clifton Park.</p>
               <div className="mt-6 flex flex-wrap gap-2">
                 {['Montgomery', 'Albany', 'Saratoga', 'Fulton', 'Schoharie'].map((county) => <span key={county} className="rounded-full bg-[#f6f5f0] px-4 py-2 text-sm font-medium text-stone-700">{county} County</span>)}
               </div>
@@ -235,7 +235,7 @@ export default function Home() {
                   ['Can I choose the cuts for an animal order?', 'A cut sheet can be provided upon request so you can select your preferred cuts.'],
                   ['Where is the meat processed?', 'Our meat is processed at a USDA-inspected facility and provided as individually labeled cuts.'],
                   ['Where do I pick up my order?', 'Pickup is available by arrangement at our farm in the Town of Florida, Montgomery County. Because the farm address is private, details are shared after an order is confirmed.'],
-                  ['Is delivery available?', 'Delivery may be available for larger orders across our Upstate New York service area. Include your town, county, and desired quantity in your email.'],
+                  ['Is delivery available?', 'Delivery may be available for larger orders depending on location. Customers from anywhere are welcome to inquire—include your town, county, and desired quantity in your email.'],
                 ].map(([question, answer]) => <div key={question} className="grid gap-2 py-6 md:grid-cols-[.8fr_1.2fr] md:gap-10"><h3 className="text-lg font-semibold text-stone-900">{question}</h3><p className="leading-relaxed text-stone-600">{answer}</p></div>)}
               </div>
               <a href={generalContactHref} className="mt-8 inline-flex items-center font-semibold text-[#3f5b38]">Have another question? Email the farm <ArrowRight className="ml-2 h-4 w-4" /></a>

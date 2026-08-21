@@ -17,8 +17,8 @@ export default function Header() {
 
   return (
     <header className="absolute inset-x-0 top-0 z-50 border-b border-white/15 bg-black/30 backdrop-blur-md">
-      <div className="container mx-auto flex h-20 items-center justify-between px-5 md:px-8">
-        <Link href="/" className="flex items-center gap-3" aria-label="Willow Anchor Farm home">
+      <div className="container mx-auto flex h-20 w-full items-center justify-between px-5 md:px-8">
+        <Link href="/" className="flex min-w-0 items-center gap-3" aria-label="Willow Anchor Farm home">
           <span className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-full bg-white p-1.5">
             <Image src="/willow-anchor-logo.png" alt="" width={42} height={39} />
           </span>
@@ -41,7 +41,7 @@ export default function Header() {
 
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="rounded-full p-2 text-white transition-colors hover:bg-white/10 md:hidden"
+          className="shrink-0 rounded-full p-2 text-white transition-colors hover:bg-white/10 md:hidden"
           aria-label={isMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
           aria-expanded={isMenuOpen}
         >
