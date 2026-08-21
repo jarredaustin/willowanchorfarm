@@ -87,12 +87,13 @@ export default function GoatMeatPage() {
         <section id="top" className="relative flex min-h-[100svh] items-end overflow-hidden bg-black pt-20 md:min-h-[780px]">
           <Header />
           <Image src="/meat-goats.jpg" alt="Adirondack Meat Goats grazing at Willow Anchor Farm in Montgomery County, New York" fill priority sizes="100vw" className="object-cover object-[56%_center] sm:object-center" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/45 to-black/25 md:bg-gradient-to-r md:from-black/85 md:via-black/55 md:to-black/20" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/65 to-black/25" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-black/10" />
           <div className="container relative z-10 mx-auto w-full px-5 pb-10 pt-32 sm:pb-16 md:px-8 md:pb-24">
             <div className="min-w-0 max-w-3xl">
               <p className="mb-4 max-w-[19rem] text-xs font-semibold uppercase leading-relaxed tracking-[0.14em] text-white/75 sm:max-w-none sm:text-sm sm:tracking-[0.2em]">Town of Florida · Montgomery County, NY</p>
-              <h1 className="max-w-full text-[2.55rem] font-semibold leading-[1.06] tracking-tight text-white sm:text-6xl lg:text-7xl">Pasture-raised goat meat in Upstate New York.</h1>
-              <p className="mt-5 max-w-2xl text-base leading-relaxed text-white/85 sm:mt-6 sm:text-lg md:text-xl">Savanna and Boer heritage goats raised on pasture. Ask about individual cuts or ordering an animal with a cut sheet.</p>
+              <h1 className="shadow-text max-w-full text-[2.55rem] font-semibold leading-[1.06] tracking-tight text-white sm:text-6xl lg:text-7xl">Pasture-raised goat meat in Upstate New York.</h1>
+              <p className="shadow-text mt-5 max-w-2xl text-base leading-relaxed text-white/95 sm:mt-6 sm:text-lg md:text-xl">Savanna and Boer heritage goats raised on pasture. Ask about individual cuts or ordering an animal with a cut sheet.</p>
               <div className="mt-7 flex w-full flex-col gap-3 sm:mt-8 sm:w-auto sm:flex-row">
                 <a href={goatInquiryHref} className="inline-flex min-h-12 w-full items-center justify-center rounded-full bg-white px-5 py-3 font-semibold text-[#3f5b38] hover:bg-white/90 sm:w-auto sm:px-6">Check availability and pricing <ArrowRight className="ml-2 h-4 w-4 shrink-0" /></a>
                 <a href="#how-to-buy" className="inline-flex min-h-12 w-full items-center justify-center rounded-full border border-white/70 px-5 py-3 font-semibold text-white hover:bg-white/10 sm:w-auto sm:px-6">How ordering works</a>
