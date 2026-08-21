@@ -6,10 +6,10 @@ import Link from 'next/link'
 import { Menu, X } from 'lucide-react'
 
 const navItems = [
-  { label: 'Meat', href: '#meat' },
-  { label: 'Our Practices', href: '#our-practices' },
-  { label: 'Service Area', href: '#service-area' },
-  { label: 'How to Buy', href: '#how-to-buy' },
+  { label: 'Goat Meat', href: '/goat-meat-upstate-ny' },
+  { label: 'Our Practices', href: '/#our-practices' },
+  { label: 'Service Area', href: '/#service-area' },
+  { label: 'How to Buy', href: '/#how-to-buy' },
 ]
 
 export default function Header() {
@@ -18,7 +18,7 @@ export default function Header() {
   return (
     <header className="absolute inset-x-0 top-0 z-50 border-b border-white/15 bg-black/30 backdrop-blur-md">
       <div className="container mx-auto flex h-20 items-center justify-between px-5 md:px-8">
-        <Link href="#top" className="flex items-center gap-3" aria-label="Willow Anchor Farm home">
+        <Link href="/" className="flex items-center gap-3" aria-label="Willow Anchor Farm home">
           <span className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-full bg-white p-1.5">
             <Image src="/willow-anchor-logo.png" alt="" width={42} height={39} />
           </span>
@@ -27,9 +27,9 @@ export default function Header() {
 
         <nav className="hidden items-center gap-7 md:flex" aria-label="Main navigation">
           {navItems.map((item) => (
-            <a key={item.href} href={item.href} className="text-sm font-medium text-white/90 transition-colors hover:text-white">
+            <Link key={item.href} href={item.href} className="text-sm font-medium text-white/90 transition-colors hover:text-white">
               {item.label}
-            </a>
+            </Link>
           ))}
           <a
             href="mailto:william@willowanchorfarm.com?subject=Willow%20Anchor%20Farm%20Inquiry"
@@ -53,9 +53,9 @@ export default function Header() {
           <ul className="flex flex-col gap-1">
             {navItems.map((item) => (
               <li key={item.href}>
-                <a href={item.href} onClick={() => setIsMenuOpen(false)} className="block rounded-lg px-4 py-3 text-white/90 hover:bg-white/10">
+                <Link href={item.href} onClick={() => setIsMenuOpen(false)} className="block rounded-lg px-4 py-3 text-white/90 hover:bg-white/10">
                   {item.label}
-                </a>
+                </Link>
               </li>
             ))}
             <li>

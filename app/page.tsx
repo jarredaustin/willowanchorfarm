@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import Header from '../components/Header'
 import { ArrowRight, Facebook, Mail, MapPin } from 'lucide-react'
 
@@ -72,7 +73,10 @@ export default function Home() {
                   <p className="mb-2 text-sm font-semibold uppercase tracking-[0.18em] text-[#4A6741]">Adirondack Meat Goats</p>
                   <h3 className="text-3xl font-semibold text-stone-900">Savanna &amp; Boer heritage</h3>
                   <p className="mt-4 leading-relaxed text-stone-600">Our Adirondack Meat Goats are a multigenerational blend of Savanna and Boer goats, raised on pasture through rotational grazing. Individual cuts may be available, or request a cut sheet when ordering an animal.</p>
-                  <a href={goatInquiryHref} className="mt-7 inline-flex items-center rounded-full bg-[#4A6741] px-6 py-3 font-semibold text-white transition-colors hover:bg-[#3f5b38]">Ask about goat meat <ArrowRight className="ml-2 h-4 w-4" /></a>
+                  <div className="mt-7 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
+                    <Link href="/goat-meat-upstate-ny" className="inline-flex items-center rounded-full bg-[#4A6741] px-6 py-3 font-semibold text-white transition-colors hover:bg-[#3f5b38]">Learn about our goat meat <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                    <a href={goatInquiryHref} className="font-semibold text-[#3f5b38] hover:underline">Check availability</a>
+                  </div>
                 </div>
               </article>
               <article id="beef" className="overflow-hidden rounded-3xl bg-[#f6f5f0]">
@@ -298,6 +302,7 @@ export default function Home() {
             <div>
               <h2 className="mb-4 text-sm font-semibold uppercase tracking-wider text-white/50">Explore</h2>
               <nav className="flex flex-col items-start gap-3" aria-label="Footer navigation">
+                <Link href="/goat-meat-upstate-ny" className="text-white/75 transition-colors hover:text-white">Goat Meat</Link>
                 <a href="#products" className="text-white/75 transition-colors hover:text-white">Products</a>
                 <a href="#service-area" className="text-white/75 transition-colors hover:text-white">Service Area</a>
                 <a href="#how-to-buy" className="text-white/75 transition-colors hover:text-white">How to Buy</a>
